@@ -37,3 +37,14 @@ Route::get('/jj', function () {
 
     return view('rumus', compact('segitiga','lingkaran','persegi','persegi_panjang'));
 });
+
+//parameter 
+Route::get('/about2/{nama}/{jenis_kelamin}/{pendidikan_terakhir}/{pekerjaan}/{alamat}', function (Request $request, $nama, $jenis_kelamin, $pendidikan_terakhir, $pekerjaan,
+$alamat) {
+    $nama2 = $nama;
+    $jenis_kelamin2 = $jenis_kelamin;
+    $pendidikan_terakhir2 = $pendidikan_terakhir;
+    $pekerjaan2 = $pekerjaan;
+    $alamat2 = $alamat;
+    return view('biodata2',compact('nama2','jenis_kelamin2','pendidikan_terakhir2','pekerjaan2','alamat2'));
+});
